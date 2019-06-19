@@ -6,8 +6,6 @@ Game designed for improving player multitasking ability. Require fast solving of
 
 ### Installation guide
 
-- Install Redis database on your system (default host: **127.0.0.1** , default port: **6379**)
-
 - Install node dependencies
 ```sh
 $ npm install

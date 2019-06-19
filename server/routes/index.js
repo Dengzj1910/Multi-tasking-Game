@@ -6,7 +6,7 @@ var router = express.Router();
 var fs = require('fs');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://admin:password123@ds121624.mlab.com:21624/multitask_game_514';
+var url = "mongodb+srv://admin:admin123@cluster0-zspnt.mongodb.net/test?retryWrites=true&w=majority";
 
 
 router.get('/', function(req, res, next) {
@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.put('/api/players', function(req, res, next) {
-    var score = req.body.score; // invert so that highest score is on top of redis set
+    var score = req.body.score;
     var player = req.body.player;
     var gametype = req.body.gametype;
     var datetime = new Date().toLocaleString();

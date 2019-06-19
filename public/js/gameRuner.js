@@ -33,10 +33,10 @@ var gameRuner = (function () {
 
 
     /**
-     * @typeOfGame 表示我们设计的三种实验treatment
-     * 1 代表AAAAAAABBBBBBB模式，串行显示
-     * 2 代表ABABABABABABAB模式，串行显示
-     * 3 代表AB AB AB AB...模式，双列并行显示
+     * @typeOfGame : denote three design
+     * 1 denote AAAAAAABBBBBBB pattern
+     * 2 denote ABABABABABABAB pattern
+     * 3 denote AB AB AB AB... pattern
      * */
     function startNewGame(typeOfGame) {
         gameType = typeOfGame;
@@ -70,7 +70,7 @@ var gameRuner = (function () {
         }
     }
 
-    // ui回调之规定时间内答了
+    // call back function when answered in time
     function onTaskAnswered(anwserInfo) {
         // stat
         if (gameType === 1 || gameType === 2) {
@@ -109,7 +109,7 @@ var gameRuner = (function () {
         }
     }
 
-    // ui回调之规定时间内没有做答
+    // ui call back when did not answer on time.
     function onTaskMissed() {
         if (isMathCurrentTask) {
             mathTaskMissedCount++;
@@ -121,17 +121,17 @@ var gameRuner = (function () {
         checkIfShowNextScreen();
     }
 
-    // 限时进度条结束和回答完成
+    //the time limit bar.
     function checkIfShowNextScreen() {
         if (shouldGameFinish()) {
             showNewScreen();
         } else {
-            // 结束了
+            // finish
             gameFinished();
         }
     }
 
-    // 记录第几轮
+    // record the rounds
     function showNewScreen() {
         isVisualCurrentTask = 0;
         isMathCurrentTask = 0;
