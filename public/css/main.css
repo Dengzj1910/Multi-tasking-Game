@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.loadingWrapper {
+  width: 100%;
+  position: absolute;
+  top: 2000px;
+  left: 0;
+  background: #ebebeb;
+  z-index: 1;
+  top: 0; }
+.loadingWrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  display: none; }
+
+.highscoresWrapper {
+  width: 100%;
+  position: absolute;
+  top: 2000px;
+  left: 0;
+  color: #ebebeb;
+  background: #4e5d6c;
+  z-index: 10; }
+.highscoresWrapper .higscoresDataWrapp {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+.highscoresWrapper .higscoresDataWrapp p {
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #ebebeb; }
+.highscoresWrapper .higscoresDataWrapp ul {
+  width: 100%;
+  overflow: hidden; }
+.highscoresWrapper .higscoresDataWrapp ul li {
+  float: left;
+  width: 100%;
+  font-size: 28px;
+  padding: 3px 0;
+  margin: 3px 0;
+  border-bottom: 1px dotted #2b3e50; }
+.highscoresWrapper .higscoresDataWrapp ul li span:first-child {
+  float: left; }
+.highscoresWrapper .higscoresDataWrapp ul li span:last-child {
+  float: right; }
+.highscoresWrapper .higscoresDataWrapp ul li:last-child {
+  border-bottom: none; }
+.highscoresWrapper .higscoresDataWrapp .startGame {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  background: #4cae4c;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.gameWrapper {
+  width: 100%;
+  position: absolute;
+  top: 2000px;
+  left: 0;
+  color: #ebebeb;
+  background: #2b3e50;
+  z-index: 20; }
+
+.gamescoreWrapper {
+  width: 100%;
+  position: absolute;
+  top: 2000px;
+  left: 0;
+  color: #2b3e50;
+  background: rgba(235, 235, 235, 0.9);
+  z-index: 30; }
+.gamescoreWrapper .gamescoreDataWrapp {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  color: #4e5d6c;
+  text-align: center;
+  font-size: 70px; }
+.gamescoreWrapper .gamescoreDataWrapp .gamescoreTile {
+  width: 100%;
+  text-decoration: underline; }
+.gamescoreWrapper .gamescoreDataWrapp p {
+  width: 100%;
+  padding: 10px 0;
+  margin: 25px auto;
+  text-decoration: none; }
+.gamescoreWrapper .gamescoreDataWrapp span {
+  font-size: 20px;
+  color: #ebebeb;
+  border-radius: 4px;
+  padding: 10px 0;
+  cursor: pointer; }
+.gamescoreWrapper .gamescoreDataWrapp span.newGameGamescoreButton1 {
+  float: left;
+  width: 100%;
+  background: #4cae4c; }
+.gamescoreWrapper .gamescoreDataWrapp span.newGameGamescoreButton2 {
+  float: left;
+  width: 100%;
+  background: #4cae4c; }
+.gamescoreWrapper .gamescoreDataWrapp span.newGameGamescoreButton3 {
+  float: left;
+  width: 100%;
+  background: #4cae4c; }
+.gamescoreWrapper .gamescoreDataWrapp span.saveScoreButton {
+  width: 30%;
+  float: right;
+  background: #d9534f; }
+.gamescoreWrapper .gamescoreDataWrapp span.saveScoreButton img {
+  width: 28px; }
+.gamescoreWrapper .gamescoreDataWrapp input {
+  width: 68%;
+  float: left;
+  padding: 6px 0;
+  color: #4e5d6c;
+  font-size: 30px;
+  text-align: center; }
+.gamescoreWrapper .gamescoreDataWrapp .orText {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0; }
+
+.centerContainer {
+  width: 990px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+.topProgressBarWrapp {
+  width: 990px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ebebeb;
+  background: #4e5d6c;
+  z-index: 21; }
+.topProgressBarWrapp .topProgress {
+  width: 990px;
+  height: 20px;
+  background: #d9534f;
+  z-index: 22;
+  position: absolute;
+  right: 990px; }
+.topProgressBarWrapp span {
+  position: absolute;
+  z-index: 23;
+  font-size: 15px;
+  top: 2px; }
+.topProgressBarWrapp .startLabel {
+  float: left;
+  left: 2px; }
+.topProgressBarWrapp .finishLabel {
+  float: right;
+  right: 2px; }
+
+.taskContainerWrappVisual {
+  width: 494px;
+  float: left;
+  margin-top: 20px;
+  display: none;
+}
+
+/*.taskContainerWrappVisual .taskProgressBarWrapp {*/
+/*width: 20px;*/
+/*height: 600px;*/
+/*float: left;*/
+/*background: #4e5d6c;*/
+/*border: 1px solid #ebebeb;*/
+/*overflow: hidden;*/
+/*position: relative;*/
+/*z-index: 21;*/
+/*}*/
+
+/*.taskContainerWrappVisual .taskProgressBarWrapp .taskProgress {*/
+/*width: 20px;*/
+/*height: 600px;*/
+/*background: #5bc0de;*/
+/*position: absolute;*/
+/*z-index: 22;*/
+/*}*/
+
+.taskContainerWrappMath {
+  width: 494px;
+  float: left;
+  margin-top: 20px;
+}
+
+/*.taskContainerWrappMath .taskProgressBarWrapp {*/
+/*width: 20px;*/
+/*height: 600px;*/
+/*float: left;*/
+/*background: #4e5d6c;*/
+/*border: 1px solid #ebebeb;*/
+/*overflow: hidden;*/
+/*position: relative;*/
+/*z-index: 21;*/
+/*}*/
+
+/*.taskContainerWrappMath .taskProgressBarWrapp .taskProgress {*/
+/*width: 20px;*/
+/*height: 600px;*/
+/*background: #5bc0de;*/
+/*position: absolute;*/
+/*z-index: 22;*/
+/*}*/
+
+.taskContainer {
+  width: 400px;
+  height: 600px;
+  float: left;
+  padding: 0 36px; }
+.taskContainer ul {
+  width: 400px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #4e5d6c; }
+.taskContainer ul li {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 190px;
+  height: 180px;
+  background: #4e5d6c;
+  font-size: 180px;
+  text-align: center;
+  cursor: pointer; }
+.taskContainer ul li img {
+  width: 190px;
+  height: 180px; }
+.taskContainer ul li:nth-child(even) {
+  margin-right: 0; }
+.taskContainer #activeVisualItem,
+.taskContainer .activePlaceholder {
+  width: 190px;
+  height: 180px;
+  margin: 0 auto;
+  background: #d9534f; }
+.taskContainer #activeVisualItem img,
+.taskContainer .activePlaceholder img {
+  width: 190px;
+  height: 180px; }
+.taskContainer #activeNumber {
+  width: 100%;
+  height: 180px;
+  font-size: 180px;
+  text-align: center; }
+
+.redTaskContainer {
+  background: #d9534f; }
+
+.greenTaskContainer {
+  background: #4cae4c; }
+
+/*.taskSplitter {*/
+/*width: 1px;*/
+/*height: 600px;*/
+/*background: #4e5d6c;*/
+/*float: left;*/
+/*margin-top: 20px; }*/
+
+#visualTasksImages {
+  display: none; }
+

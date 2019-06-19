@@ -1,0 +1,328 @@
+@import '_variables';
+@import '_reset';
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+@mixin sectionWrapper(){
+  width: 100%;
+  position: absolute;
+  top: 2000px;
+  left: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.loadingWrapper{
+  @include sectionWrapper();
+  background: $white;
+  z-index: 1;
+  top: 0;
+
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+  }
+}
+
+.highscoresWrapper{
+  @include sectionWrapper();
+  color: $white;
+  background: $blue;
+  z-index: 10;
+
+  .higscoresDataWrapp{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    p{
+      font-size: 50px;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 8px;
+      border-bottom: 4px solid $white;
+    }
+
+    ul{
+      width: 100%;
+      overflow: hidden;
+
+      li{
+        float: left;
+        width: 100%;
+        font-size: 28px;
+        padding: 3px 0;
+        margin: 3px 0;
+        border-bottom: 1px dotted $blue-dark;
+
+        span:first-child{
+          float: left;
+        }
+        span:last-child{
+          float: right;
+        }
+      }
+      li:last-child{
+        border-bottom: none;
+      }
+    }
+
+    .startGame{
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 20px;
+      background: $green;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.gameWrapper{
+  @include sectionWrapper();
+  color: $white;
+  background: $blue-dark;
+  z-index: 20;
+}
+
+.gamescoreWrapper{
+  @include sectionWrapper();
+  color: $blue-dark;
+  background: rgba(235,235,235, .9);
+  z-index: 30;
+
+  .gamescoreDataWrapp{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: $blue;
+    text-align: center;
+    font-size: 100px; 
+
+    .gamescoreTile{
+      width: 100%;  
+      text-decoration: underline;
+    }
+
+    p{
+      width: 100%;
+      padding: 10px 0;
+      margin: 50px auto;
+      text-decoration: none;
+    }
+
+    span{
+      font-size: 30px;
+      color: $white;
+      border-radius: 4px;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    span.newGameGamescoreButton{
+      float: left;
+      width: 100%;
+      background: $green;
+    }
+    span.saveScoreButton{
+      width: 30%;
+      float: right;
+      background: $red;
+
+      img{
+        width: 28px;
+      }
+    }
+
+    input{
+      width: 68%;
+      float: left;
+      padding: 6px 0;
+      color: $blue;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .orText{
+      width: 100%;
+      float: left;
+      text-align: center;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+  }
+}
+
+.centerContainer{
+  width: $container-width;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.topProgressBarWrapp{
+  width: $container-width;
+  height: $top-pb-height;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid $white;
+  background: $blue;
+  z-index: 21;
+
+  .topProgress{
+    width: $container-width;
+    height: $top-pb-height;
+    background: $red;
+    z-index: 22;
+    position: absolute;
+    right: $container-width;
+  }
+
+  span{
+    position: absolute;
+    z-index: 23;
+    font-size: 15px;
+    top: 2px;
+  }
+
+  .startLabel{
+    float: left;
+    left: 2px;
+  }
+  .finishLabel{
+    float: right;
+    right: 2px;
+  }
+}
+
+.taskContainerWrapp{
+  width: $task-wrapp-width;
+  float: left;
+  margin-top: 20px;
+
+  .taskProgressBarWrapp{
+    width: $task-pb-width;
+    height: $task-wrapp-height;
+    float: left;
+    background: $blue;
+    border: 1px solid $white;
+    overflow: hidden;
+    position: relative;
+    z-index: 21;
+
+    .taskProgress{
+      width: $task-pb-width;
+      height: $task-wrapp-height;
+      background: $blue-light;
+      position: absolute;
+      z-index: 22;
+    }
+  }
+}
+
+.taskContainer{
+  width: $task-container-width;
+  height: $task-wrapp-height;
+  float: left;
+  padding: 0 36px;
+
+  ul{
+    width: $task-container-width;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-bottom: 1px solid $blue;
+
+    li{
+      float: left;
+      margin: 0 20px 20px 0;
+      width: 190px;
+      height: 180px;
+      background: $blue;
+      font-size: 180px;
+      text-align: center;
+      cursor: pointer;
+
+      img{
+        width: 190px;
+        height: 180px;
+      }
+    }
+    li:nth-child(even){
+      margin-right: 0;
+    }
+  }
+
+  #activeVisualItem,
+  .activePlaceholder{
+    width: 190px;
+    height: 180px;
+    margin: 0 auto;
+    background: $red;
+
+    img{
+      width: 190px;
+      height: 180px;
+    }
+  }
+
+  #activeNumber{
+    width: 100%;
+    height: 180px;
+    font-size: 180px;
+    text-align: center;
+  }
+}
+
+.redTaskContainer{
+  background: $red;
+}
+.greenTaskContainer{
+  background: $green;
+}
+
+.taskSplitter{
+  width: 1px;
+  height: $task-wrapp-height;
+  background: $blue;
+  float: left;
+  margin-top: 20px;
+}
+
+
+#visualTasksImages{
+  display: none;
+}
+

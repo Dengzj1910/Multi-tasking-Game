@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  .loadingWrapper
+    .centerContainer
+      img(src="/images/loading.gif", alt="loading animation").loadingImage
+
+  .highscoresWrapper
+    .centerContainer
+      .higscoresDataWrapp
+        p Please Choose Game Type
+        ul.buttonList
+          li.startGameType1 Start Game One
+          li.startGameType2 Start Game Two
+          li.startGameType3 Start Game Three
+
+  .gameWrapper
+    .centerContainer
+
+      .topProgressBarWrapp
+        .topProgress
+        span.startLabel Start
+        span.finishLabel Finish
+      .taskContainerWrapp
+        .taskContainerWrappVisual
+          //.taskProgressBarWrapp
+          //  #visualProgress.taskProgress
+
+          #visualTaskContainer.taskContainer
+            ul.visualTaskItemsWrapp
+              li#pic-1.visualTaskItem
+              li#pic-2.visualTaskItem
+              li#pic-3.visualTaskItem
+              li#pic-4.visualTaskItem
+
+            #activeVisualItem
+
+        .taskContainerWrappMath
+          #mathTaskContainer.taskContainer
+            ul
+              li#numb-1.mathTaskItem
+              li#numb-2.mathTaskItem
+              li#numb-3.mathTaskItem
+              li#numb-4.mathTaskItem
+
+            #activeNumber
+              .activePlaceholder
+
+          //.taskProgressBarWrapp
+          //  #mathProgress.taskProgress
+
+  .gamescoreWrapper
+    .centerContainer
+      .gamescoreDataWrapp
+        .gamescoreTile Participant's Score Is
+        p
+        span.newGameGamescoreButton1 New Game One
+        br
+        span.newGameGamescoreButton2 New Game Two
+        br
+        span.newGameGamescoreButton3 New Game Three
+        .orText or
+        input(type="text", placeholder="Your Name")
+        span.saveScoreButton Save Score
+
+
+  #visualTasksImages
+    each image in images
+      img(src="/images/appImages/" + image)
+
