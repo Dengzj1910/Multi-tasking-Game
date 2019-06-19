@@ -1,0 +1,20 @@
+{
+  "name": "multitasking-game",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nenadbugaric/multitasking-game",
+  "authors": [
+    "Nenad Bugaric <n.bugaric@gmail.com>"
+  ],
+  "description": "simple multitasking game",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.4"
+  }
+}
